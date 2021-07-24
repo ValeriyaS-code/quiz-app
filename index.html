@@ -9,12 +9,15 @@
   <link href="./assets/css/style.css" rel="stylesheet">
   </head>
   <body>
-    
+
   <nav class="navbar">
     <div class="container-fluid">
       <p class="navbar-brand">View High Scores</p>
     </div>
-    <div id="timer">Timer: 60</div>
+    <div id="timer-div">
+      <span>Timer:</span>
+      <span id="timer">60</span>
+    </div>
   </nav>    
 
 
@@ -22,14 +25,20 @@
   <div class="px-4 py-5 my-5 text-center">
     <h1 class="display-5 fw-bold"></h1>
     <div id="question">
-      <h1>Question</h1>
-      <div class="answer-box">
-        <button id="choice1" type="button" class="btn-primary btn-lg px-4 gap-3" >choice1</button>
-        <button id="choice2" type="button" class="btn-primary btn-lg px-4 gap-3" >choice2</button>
-        <button id="choice3" type="button" class="btn-primary btn-lg px-4 gap-3" >choice3</button>
-        <button id="choice4" type="button" class="btn-primary btn-lg px-4 gap-3" >choice4</button>
+      <h1 id="question-text">Question</h1>
+      <div id="answer-box">
+        <button id="choice1" type="button" class="btn-primary btn-lg px-4 gap-3" onclick="checkAnswer('1')">choice1</button>
+        <button id="choice2" type="button" class="btn-primary btn-lg px-4 gap-3" onclick="checkAnswer('2')">choice2</button>
+        <button id="choice3" type="button" class="btn-primary btn-lg px-4 gap-3" onclick="checkAnswer('3')">choice3</button>
+        <button id="choice4" type="button" class="btn-primary btn-lg px-4 gap-3" onclick="checkAnswer('4')">choice4</button>
       </div>
+      <div id="display-answer">Answer</div>
+      </div>
+
+    <div id="intro"> 
+      <p>Intro</p>
     </div>
+
 
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4"></p>

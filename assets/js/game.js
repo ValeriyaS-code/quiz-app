@@ -1,7 +1,15 @@
 const startButton = document.getElementById("start_button");
 const timer = document.getElementById("timer");
-const questionss = document.getElementById("question");
+const questions = document.getElementById("question");
 let timeLeft = 10;
+const introduction = document.getElementById("intro");
+const choice1 = document.getElementById("choice1");
+const questionText = document.getElementById("question-text");
+
+
+questions.style.display = "none";
+
+const answerDisplay = document.getElementById("display-answer");
 
 
 var startTimer = function(){
@@ -15,25 +23,56 @@ var startTimer = function(){
 
 }
 
-document.getElementById("start_button").style.display = "none";
-
-var startGame = function() {
-  
-}
-
-
 
 startButton.addEventListener("click", function(){   
     startTimer();
+    startButton.style.display = "none";
+    introduction.style.display = "none";
+    gameStart();
 });
 
 
-    
+var gameStart = function() {
+    questions.style.display = "block";
+    questionText.innerHTML = questionsArray[0].question;
+    choice1.innerHTML = questionsArray[1].choice1;
+  
+    // choice2.innerHTML = questionsArray[2].choice2;
+    // choice3.innerHTML = questionsArray[3].choice3;
+    // choice4.innerHTML = questionsArray[4].choice4;
+}
+
+// displaying questions
+// var displayQuestions = function() {
+//     questions.innerHTML = questionsArray[i].question;
+//     choice1.innerHTML = questionsArray[i].choice1;
+//     choice2.innerHTML = questionsArray[i].choice2;
+//     choice3.innerHTML = questionsArray[i].choice3;
+//     choice4.innerHTML = questionsArray[i].choice4;
+// };
+
+//check answers
+// var checkAnswer = function() {
+//     if (answer === questionsArray[i].answer) {
+//         timeLeft +=10;
+//         answerDisplay.innerHTML = "Correct!";
+//         answerDisplay.style.display = "block";
+//     } if (answer !== questionsArray[i].answer){
+//         timeLeft -=10;
+//         answerDisplay.innerHTML = "Wrong!"
+//     }
+// };
+
+
+
+// document.getElementById("start_button").style.display = "none";
+
+
 
 
 
 //questions object array
-let questions = [
+let questionsArray = [
     {
         question: "Commonly used data types Do Not Include: ",
         choice1: "1. strings",
