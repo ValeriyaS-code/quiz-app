@@ -9,36 +9,36 @@
   <link href="./assets/css/style.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar">
-      <div class="container-fluid">
-        <p class="navbar-brand">View High Scores</p>
-      </div>
+    
+  <nav class="navbar">
+    <div class="container-fluid">
+      <p class="navbar-brand">View High Scores</p>
+    </div>
+    <div id="timer">Timer: 60</div>
+  </nav>    
 
 
-        <div id="timer">10</div>
-
-
-    </nav>    
 <main>
   <div class="px-4 py-5 my-5 text-center">
     <h1 class="display-5 fw-bold"></h1>
     <div id="question">
       <h1>Question</h1>
-      <button id="choice1">choice1</button>
-      <button id="choice2">choice2</button>
-      <button id="choice3">choice3</button>
-      <button id="choice4">choice4</button>
-
+      <div class="answer-box">
+        <button id="choice1" type="button" class="btn-primary btn-lg px-4 gap-3" >choice1</button>
+        <button id="choice2" type="button" class="btn-primary btn-lg px-4 gap-3" >choice2</button>
+        <button id="choice3" type="button" class="btn-primary btn-lg px-4 gap-3" >choice3</button>
+        <button id="choice4" type="button" class="btn-primary btn-lg px-4 gap-3" >choice4</button>
+      </div>
     </div>
 
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">
-      </p>
+      <p class="lead mb-4"></p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <button type="button" class="btn-primary btn-lg px-4 gap-3" id="start_button">Start Quiz</button>
       </div>
     </div>
   </div>
+
 </main>
     <script src="./assets/js/game.js"></script>
 </body>

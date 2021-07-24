@@ -6,29 +6,11 @@
   border: none;
   color: #fff;
   background-color: #400080;
-  border: none;
-}
-
-.btn {
-  width: 30%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  margin: 5px 0;
-  margin: 10px 350px;
-  padding: 7px 7px;
-}
-
-.display-5 {
-  font-size: 35px;
-}
-
-#question {
-  width: 50%;
-  display: inline-block;
-  justify-content: center;
+  width: 550px;
+  padding: 8px 5px;
+  margin: 5px 0px;
   text-align: left;
-  font-size: 35px;
+  
 }
 
 .btn-primary:hover {
@@ -44,13 +26,40 @@
   box-shadow: none;
 }
 
+.answer-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.display-5 {
+  font-size: 35px;
+}
+
+#question {
+  width: 50%;
+  display: inline-block;
+  justify-content: center;
+  text-align: left;
+  font-size: 35px;
+}
+
 .navbar-brand {
   color: #a64ca6;
+  font-size: 20px;
 }
 
 .navbar-brand:hover {
   color: #a64ca6;
   cursor: pointer;
+}
+
+#timer {
+ font-size: 20px;
+ position: absolute;
+ right: 10px;
+ top: 15px;
 }
 
 #name:hover {
@@ -59,17 +68,5 @@
   outline:none;
 }
 
-.submit-button {
-  border: none;
-  color: #fff;
-  background-color: #400080;
-  border: none;
-}
-
-.submit-button:hover {
-  cursor: pointer;
-  background-color: #a64ca6;
-  border: none;
-}
 
 
