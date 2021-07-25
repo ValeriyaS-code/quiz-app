@@ -4,7 +4,11 @@ const questions = document.getElementById("question");
 let timeLeft = 10;
 const introduction = document.getElementById("intro");
 const choice1 = document.getElementById("choice1");
+const choice2 = document.getElementById("choice2");
+const choice3 = document.getElementById("choice3");
+const choice4 = document.getElementById("choice4");
 const questionText = document.getElementById("question-text");
+var i = 0;
 
 
 questions.style.display = "none";
@@ -23,7 +27,7 @@ var startTimer = function(){
 
 }
 
-
+//start game button
 startButton.addEventListener("click", function(){   
     startTimer();
     startButton.style.display = "none";
@@ -31,37 +35,27 @@ startButton.addEventListener("click", function(){
     gameStart();
 });
 
-
+//starts the game
 var gameStart = function() {
     questions.style.display = "block";
-    questionText.innerHTML = questionsArray[0].question;
-    choice1.innerHTML = questionsArray[1].choice1;
-  
-    // choice2.innerHTML = questionsArray[2].choice2;
-    // choice3.innerHTML = questionsArray[3].choice3;
-    // choice4.innerHTML = questionsArray[4].choice4;
+    questionText.innerHTML = questionsArray[i].question;
+    choice1.innerHTML = questionsArray[i].choice1;
+    choice2.innerHTML = questionsArray[i].choice2;
+    choice3.innerHTML = questionsArray[i].choice3;
+    choice4.innerHTML = questionsArray[i].choice4;
 }
 
-// displaying questions
-// var displayQuestions = function() {
-//     questions.innerHTML = questionsArray[i].question;
-//     choice1.innerHTML = questionsArray[i].choice1;
-//     choice2.innerHTML = questionsArray[i].choice2;
-//     choice3.innerHTML = questionsArray[i].choice3;
-//     choice4.innerHTML = questionsArray[i].choice4;
-// };
-
 //check answers
-// var checkAnswer = function() {
-//     if (answer === questionsArray[i].answer) {
-//         timeLeft +=10;
-//         answerDisplay.innerHTML = "Correct!";
-//         answerDisplay.style.display = "block";
-//     } if (answer !== questionsArray[i].answer){
-//         timeLeft -=10;
-//         answerDisplay.innerHTML = "Wrong!"
-//     }
-// };
+var checkAnswer = function(answer) {
+    if (answer === questionsArray[i].answer) {
+        timeLeft +=10;
+        answerDisplay.innerHTML = "Correct!";
+        // answerDisplay.style.display = "block";
+    } else if (answer !== questionsArray[i].answer){
+        timeLeft -=10;
+        answerDisplay.innerHTML = "Wrong!"
+    }
+};
 
 
 
